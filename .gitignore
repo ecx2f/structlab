@@ -1,18 +1,33 @@
-# Archivos de compilación
+# Maven
 target/
-*.class
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
 
-# Archivos de IDE
+# Eclipse
+.classpath
+.project
+.settings/
+.factorypath
+
+# IntelliJ
 .idea/
-.vscode/
 *.iml
+*.iws
+*.ipr
 
-# Archivos del sistema
+# VS Code
+.vscode/
+
+# OS
 .DS_Store
 Thumbs.db
 
-# Archivos temporales
-*.tmp
-*.temp
-*.log
-
+# Archivos de datos generados en runtime (no versionar)
+config.json
+tiquetes.json
+atendidos.json
+colas.txt
+grafo.json
