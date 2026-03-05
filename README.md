@@ -1,88 +1,94 @@
 # BusNovaTech
 
-Sistema de gestión de terminales y servicios de buses, desarrollado en Java con estructuras de datos implementadas desde cero (sin colecciones de Java).
+University project — **Data Structures** course, Universidad Fidélitas, Costa Rica.
+
+Bus terminal management system built with pure Java: all data structures (linked lists, priority queues, weighted directed graphs) implemented from scratch without the Java Collections framework.
+
+> Spanish version: [README.es.md](./README.es.md)
 
 ---
 
-## Tecnologías
+## Tech stack
 
 | | |
 |---|---|
-| Lenguaje | Java 24 |
+| Language | Java 24 |
 | Build | Maven |
-| Serialización JSON | Gson 2.8.9 |
-| Interfaz de usuario | Swing (`JOptionPane`) |
-| Estructuras de datos | Listas enlazadas, colas de prioridad, grafos ponderados dirigidos |
+| JSON serialization | Gson 2.8.9 |
+| UI | Swing (`JOptionPane`) |
+| Data structures | Linked lists, priority queue, weighted directed graph |
 
 ---
 
-## Flujo del sistema
+## System flow
 
-1. **Inicialización** — Verifica si existe `config.json`
-2. **Configuración inicial** — Si no existe, solicita nombre de terminal, cantidad de buses y credenciales de dos usuarios
-3. **Autenticación** — Login con credenciales configuradas
-4. **Menú principal** — Acceso a todos los módulos
+1. **Startup** — checks for `config.json`
+2. **Initial setup** — if not found, prompts for terminal name, bus count and two user credentials
+3. **Login** — authenticate with configured credentials
+4. **Main menu** — access to all modules
 
 ---
 
-## Cómo ejecutar
+## How to run
 
 ```bash
 mvn compile exec:java
 ```
 
-### Primera ejecución
+### First run
 
-El sistema solicita:
-- Nombre de la terminal
-- Cantidad de buses (mínimo 3 — se asigna 1 preferencial, 1 directo, el resto normales)
-- Usuario 1 y contraseña
-- Usuario 2 y contraseña
+The system will ask for:
+- Terminal name
+- Number of buses (minimum 3 — 1 priority, 1 direct, the rest normal)
+- User 1 and password
+- User 2 and password
 
-Esta información se guarda en `config.json` y no se vuelve a solicitar.
+This is saved to `config.json` and will not be asked again.
 
-### Credenciales BCCR (Módulo 1.5)
+### BCCR credentials (Module 1.5)
 
-El módulo de tipo de cambio requiere credenciales del Web Service del Banco Central de Costa Rica.
-Antes de ejecutar, editar `ServicioBCCR.java` y reemplazar los placeholders:
+The exchange rate module requires credentials for the Costa Rica Central Bank Web Service.
+Before running, edit `ServicioBCCR.java` and replace the placeholders:
 
 ```
-BCCR_NOMBRE  →  nombre registrado en el BCCR
-BCCR_EMAIL   →  email registrado en el BCCR
-BCCR_TOKEN   →  token de acceso del BCCR
+BCCR_NOMBRE  →  name registered with BCCR
+BCCR_EMAIL   →  email registered with BCCR
+BCCR_TOKEN   →  BCCR access token
 ```
 
-### Archivos de datos generados
+### Generated data files
 
-| Archivo | Contenido |
+| File | Contents |
 |---|---|
-| `config.json` | Configuración del sistema (terminal, buses, usuarios) |
-| `tiquetes.json` | Cola de tiquetes pendientes |
-| `atendidos.json` | Historial de tiquetes atendidos |
-| `colas.txt` | Cantidad de personas en cola por bus |
-| `grafo.json` | Grafo de rutas entre localidades |
+| `config.json` | System configuration (terminal, buses, users) |
+| `tiquetes.json` | Pending ticket queue |
+| `atendidos.json` | Attended ticket history |
+| `colas.txt` | People count per bus queue |
+| `grafo.json` | Route graph between localities |
 
 ---
 
-## Estado del proyecto
+## Module status
 
-| Módulo | Descripción | Estado |
+| Module | Description | Status |
 |---|---|---|
-| 1.0 | Configuración de estructuras de datos | ✅ |
-| 1.1 | Creación de tiquetes | ✅ |
-| 1.2 | Atención de tiquetes | ✅ |
-| 1.3 | Llenado de las colas | ✅ |
-| 1.4 | Servicios complementarios (Grafos) | ✅ |
-| 1.5 | Consulta de tipo de cambio (BCCR) | ✅ |
+| 1.0 | Data structure configuration | ✅ |
+| 1.1 | Ticket creation | ✅ |
+| 1.2 | Ticket attendance | ✅ |
+| 1.3 | Queue filling | ✅ |
+| 1.4 | Complementary services (Graphs) | ✅ |
+| 1.5 | Exchange rate query (BCCR) | ✅ |
 
 ---
 
-## Documentación
+## Documentation
 
-- [Módulos](./docs/modules.md) — Objetivos, funcionalidades y requerimientos por módulo
-- [Arquitectura](./docs/architecture.md) — Estructura de clases, árbol de archivos y referencia de métodos
-- [Changelog](./docs/changelog.md) — Correcciones y mejoras por entrega
+- [Modules](./docs/en/modules.md) — goals, features and requirements per module
+- [Architecture](./docs/en/architecture.md) — class overview, file tree and method reference
+- [Changelog](./docs/en/changelog.md) — fixes and improvements per submission
+
+> Spanish docs: [docs/es/](./docs/es/)
 
 ---
 
-Ver [CONTRIBUTORS.md](./CONTRIBUTORS.md) para información del equipo de desarrollo.
+See [CONTRIBUTORS.md](./CONTRIBUTORS.md) for the development team.
