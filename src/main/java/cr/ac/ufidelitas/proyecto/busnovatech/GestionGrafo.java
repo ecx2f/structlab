@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author jiro
+ * @author ecx2f
  */
 // Gestión del módulo 1.4 - Servicios Complementarios (Grafos)
 public class GestionGrafo {

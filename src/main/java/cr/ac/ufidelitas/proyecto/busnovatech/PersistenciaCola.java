@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Geral
+ * @author gerald-hf
  */
 //Viene de la ColaPrioridad
 public class PersistenciaCola {
@@ -46,7 +46,7 @@ public class PersistenciaCola {
         return null;
     }
 
-    // Andrew - menú principal de gestión de tiquetes con opciones 1.2 y 1.3
+    // ecx2f - menú principal de gestión de tiquetes con opciones 1.2 y 1.3
     public void gestionarTiquetes(ColaPrioridad cola, ModuloAtencionTiquetes moduloAtencion, AsignacionColas colas) {
         int opcion;
         do {

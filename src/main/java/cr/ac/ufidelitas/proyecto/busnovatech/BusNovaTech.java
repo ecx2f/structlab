@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Luna
+ * @author lunadd-00
  */
 //PUSE LA VERSION 2.8.9 DE GSON COMO EL PROFE
 public class BusNovaTech {
@@ -35,16 +35,16 @@ public class BusNovaTech {
 
         GestionBuses gestorBuses = new GestionBuses(config);
         PersistenciaCola persistencia = new PersistenciaCola();
-        // Andrew - crea instancia del módulo 1.2 para atención de tiquetes
+        // ecx2f - crea instancia del módulo 1.2 para atención de tiquetes
         ModuloAtencionTiquetes moduloAtencion = new ModuloAtencionTiquetes(config, gestorBuses);
 
-        // Luna - crea una instancia del módulo 1.3 de llenado de colas
+        // lunadd-00 - crea una instancia del módulo 1.3 de llenado de colas
         AsignacionColas colas = new AsignacionColas();
 
-        // gerald - crea instancia del módulo 1.4 para servicios complementarios (grafos)
+        // gerald-hf - crea instancia del módulo 1.4 para servicios complementarios (grafos)
         GestionGrafo gestionGrafo = new GestionGrafo();
 
-        // Luna - módulo 1.5 consulta BCCR
+        // lunadd-00 - módulo 1.5 consulta BCCR
         GestionTipoCambio gestionTipoCambio = new GestionTipoCambio();
 
         // Llenar colas con los buses existentes (inicialmente con cantidad 0)
@@ -156,7 +156,7 @@ public class BusNovaTech {
                     persistencia.gestionarTiquetes(cola, moduloAtencion, colas);
                     break;
                 case 3:
-                    // Luna - Submenu con los servicios complementarios
+                    // lunadd-00 - Submenu con los servicios complementarios
                     int opcionServicio;
                     do {
                         String[] servicios = {

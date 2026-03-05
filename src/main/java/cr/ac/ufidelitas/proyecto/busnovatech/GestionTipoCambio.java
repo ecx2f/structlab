@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author lunad
+ * @author lunadd-00
  */
 
 public class GestionTipoCambio {
@@ -18,10 +18,10 @@ public class GestionTipoCambio {
                     "318", 
                     "15/12/2025",
                     "16/12/2025",
-                    "Luna Delgado",
+                    "BCCR_NOMBRE",
                     "N",
-                    "luna.dd26@gmail.com",
-                    "9L2D52D2L5" 
+                    "BCCR_EMAIL",
+                    "BCCR_TOKEN" 
             );
 
             BigDecimal tipoCambio = extraerTipoCambio(indicador);

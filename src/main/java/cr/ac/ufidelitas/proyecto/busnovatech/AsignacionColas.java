@@ -2,7 +2,7 @@ package cr.ac.ufidelitas.proyecto.busnovatech;
 
 /**
  *
- * @author samim
+ * @author samu-mena
  */
 public class AsignacionColas {
 
@@ -104,7 +104,7 @@ public class AsignacionColas {
         }
     }
 
-    // Mostrar estado para Gerald
+    // Mostrar estado para gerald-hf
     public String obtenerEstadoColas() {
         String texto = "=== Estado de las colas ===\n";
         NodoCola actual = primero;
@@ -137,7 +137,7 @@ public class AsignacionColas {
         }
     }
 
-    //Luna
+    //lunadd-00
     public NodoCola getPrimero() {
         return primero;
     }

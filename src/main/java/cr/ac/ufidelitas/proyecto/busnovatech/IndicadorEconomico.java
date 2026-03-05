@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  *
- * @author lunad
+ * @author lunadd-00
  */
 
 @XmlRootElement(name = "DataSet", namespace = "http://ws.sdde.bccr.fi.cr")

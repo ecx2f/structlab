@@ -2,9 +2,9 @@ package cr.ac.ufidelitas.proyecto.busnovatech;
 
 /**
  *
- * @author @jiroaku
+ * @author ecx2f
  */
-// Andrew - clase de datos para almacenar información de tiquete atendido
+// ecx2f - clase de datos para almacenar información de tiquete atendido
 public class RegistroAtencion {
 
     private String nombrePasajero;

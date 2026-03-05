@@ -3,7 +3,7 @@ package cr.ac.ufidelitas.proyecto.busnovatech;
 
 /**
  *
- * @author samim
+ * @author samu-mena
  */
 public class Bus {
     private String idBus;

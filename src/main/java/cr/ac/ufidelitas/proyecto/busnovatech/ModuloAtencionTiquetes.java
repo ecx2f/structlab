@@ -6,9 +6,9 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author @jiroaku
+ * @author ecx2f
  */
-// Andrew - clase principal del módulo 1.2 para atención y cobro de tiquetes
+// ecx2f - clase principal del módulo 1.2 para atención y cobro de tiquetes
 public class ModuloAtencionTiquetes {
 
     private final GestionBuses gestionBuses;
@@ -65,7 +65,7 @@ public class ModuloAtencionTiquetes {
 
         double monto = calcularCobro(tiqueteAtender);
 
-        // Luna - cálculo con el consumo en línea del web service del Banco Central antes de cobrar
+        // lunadd-00 - cálculo con el consumo en línea del web service del Banco Central antes de cobrar
         double tipoCambio;
         double montoCRC;
 

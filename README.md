@@ -2,63 +2,43 @@
 
 ## Información del Proyecto
 
-**Curso:** Estructuras de Datos
-**Universidad:** Universidad Fidélitas
-**Profesor:** Kenneth Artavia A.
-**Grupo:** 6
 **Versión:** 1.0-SNAPSHOT
 
 ## Descripción General Segunda Entrega
 
 BusNovaTech es un sistema de gestión inteligente para terminales de buses que implementa estructuras de datos dinámicas para la administración de buses, tiquetes y configuración del sistema. El proyecto desarrolla los módulos 1.0 (Configuración de Estructuras de Datos), 1.1 (Creación de Tiquetes), 1.2 (Atención de Tiquetes), 1.3 (Llenado de las Colas), 1.4 (Servicios Complementarios - Grafos) y 1.5 (Consulta de Tipo de Cambio BCCR) utilizando únicamente clases básicas de Java y manejo de archivos JSON/TXT.
 
-## Equipo de Desarrollo
-
-| Integrante | Módulo | Responsabilidad |
-|------------|--------|-----------------|
-| **Jeferson Andrew Fuentes García** | 1.0 | Configuración del sistema y persistencia |
-| **Jeferson Andrew Fuentes García** | 1.2 | Atención de tiquetes e historial |
-| **Jeferson Andrew Fuentes García** | 1.4 | Servicios complementarios (grafos) |
-| **Samuel Alonso Mena Garro** | 1.0 | Gestión de buses |
-| **Samuel Alonso Mena Garro** | 1.3 | Lógica de asignación de tiquetes a buses |
-| **Samuel Alonso Mena Garro** | 1.3 | Servicios complementarios (grafos) |
-| **Gerald Obed Herra Fonseca** | 1.1 | Gestión de tiquetes |
-| **Gerald Obed Herra Fonseca** | 1.3 | Interfaz y validación de flujo |
-| **Gerald Obed Herra Fonseca** | 1.3 | Servicios complementarios (grafos) |
-| **Luna Delgado Durango** | 1.1 | Integración de módulos, login y menú principal |
-| **Luna Delgado Durango** | 1.3 | Persistencia de colas (colas.txt) |
-| **Luna Delgado Durango** | 1.5 | Consulta de tipo de cambio BCCR |
 
 
 ## Arquitectura del Sistema
 
 ### Estructura de Clases
 
-| Clase | Propósito | Autor |
-|-------|-----------|-------|
-| `BusNovaTech` | Clase principal y controlador del flujo | Luna |
-| `ConfiguracionSistema` | Gestión de configuración y persistencia JSON | Andrew |
-| `GestionBuses` | Administración de buses y tipos | Samuel |
-| `ColaPrioridad` | Implementación de cola de prioridad para tiquetes | Gerald |
-| `NodoTiquete` | Estructura de datos para tiquetes | Gerald |
-| `Nodo<T>` | Nodo genérico para estructuras enlazadas | Gerald |
-| `NodoBus` | Nodo específico para lista de buses | Samuel |
-| `Bus` | Entidad de bus con propiedades básicas | Samuel |
-| `PersistenciaCola` | Serialización/deserialización de tiquetes y colas | Gerald/Luna |
-| `ModuloAtencionTiquetes` | Automatiza y gestiona el módulo 1.2 | Andrew |
-| `HistorialAtenciones` | Control y persistencia de atendidos | Andrew |
-| `RegistroAtencion` | Representa un abordaje confirmado | Andrew |
-| `AsignacionColas` | Lógica de asignación de tiquetes a buses (Módulo 1.3) | Samuel |
-| `NodoCola` | Nodo para lista de colas de buses | Samuel |
-| `GestorIdPasajero` | Generación de IDs autoincrementales | Gerald |
-| `GrafoRutas` | Grafo ponderado dirigido para rutas de buses (Módulo 1.4) | Andrew |
-| `GestionGrafo` | Gestión del módulo 1.4 con menú y persistencia | Andrew |
-| `Localidad` | Representa una localidad donde el bus pararía | Samuel |
-| `VerticeGrafo` | Vértice del grafo con adyacentes usando arrays | Samuel |
-| `AristaGrafo` | Arista con peso para el grafo ponderado | Gerald |
-| `ServicioBCCR` | Consumo del Web Service del BCCR para tipo de cambio (Módulo 1.5) | Luna |
-| `IndicadorEconomico` | Estructura XML de respuesta del BCCR (Módulo 1.5) | Luna |
-| `GestionTipoCambio` | Gestión de consulta de tipo de cambio (Módulo 1.5) | Luna |
+| Clase | Propósito |
+|-------|-----------|
+| `BusNovaTech` | Clase principal y controlador del flujo |
+| `ConfiguracionSistema` | Gestión de configuración y persistencia JSON |
+| `GestionBuses` | Administración de buses y tipos |
+| `ColaPrioridad` | Implementación de cola de prioridad para tiquetes |
+| `NodoTiquete` | Estructura de datos para tiquetes |
+| `Nodo<T>` | Nodo genérico para estructuras enlazadas |
+| `NodoBus` | Nodo específico para lista de buses |
+| `Bus` | Entidad de bus con propiedades básicas |
+| `PersistenciaCola` | Serialización/deserialización de tiquetes y colas |
+| `ModuloAtencionTiquetes` | Automatiza y gestiona el módulo 1.2 |
+| `HistorialAtenciones` | Control y persistencia de atendidos |
+| `RegistroAtencion` | Representa un abordaje confirmado |
+| `AsignacionColas` | Lógica de asignación de tiquetes a buses (Módulo 1.3) |
+| `NodoCola` | Nodo para lista de colas de buses |
+| `GestorIdPasajero` | Generación de IDs autoincrementales |
+| `GrafoRutas` | Grafo ponderado dirigido para rutas de buses (Módulo 1.4) |
+| `GestionGrafo` | Gestión del módulo 1.4 con menú y persistencia |
+| `Localidad` | Representa una localidad donde el bus pararía |
+| `VerticeGrafo` | Vértice del grafo con adyacentes usando arrays |
+| `AristaGrafo` | Arista con peso para el grafo ponderado |
+| `ServicioBCCR` | Consumo del Web Service del BCCR para tipo de cambio (Módulo 1.5) |
+| `IndicadorEconomico` | Estructura XML de respuesta del BCCR (Módulo 1.5) |
+| `GestionTipoCambio` | Gestión de consulta de tipo de cambio (Módulo 1.5) |
 
 
 ## Módulos Implementados
@@ -249,7 +229,7 @@ El módulo implementa el algoritmo de Dijkstra para encontrar la ruta más corta
 
 #### Nota de Implementación
 
-El módulo utiliza las credenciales del desarrollador (Luna Delgado) para acceder al servicio del BCCR. En un entorno de producción, estas credenciales deberían configurarse de forma segura.
+El módulo utiliza credenciales de desarrollador para acceder al servicio del BCCR. En un entorno de producción, estas credenciales deberían configurarse de forma segura.
 
 ## Sistema de Prioridades
 
@@ -555,14 +535,14 @@ El sistema genera y utiliza los siguientes archivos:
 - **Atributos**: `bus`, `cantidad`, `siguiente`
 - **Uso**: Utilizado en `AsignacionColas` para mantener estado de colas
 
-#### `GestorIdPasajero` (Implementado por Gerald)
+#### `GestorIdPasajero`
 - **Propósito**: Utilidad para generar IDs autoincrementales de pasajeros
 - **Métodos principales**:
   - `obtenerSiguienteId()`: Retorna el siguiente ID disponible basado en máximo existente en `tiquetes.json` y `atendidos.json`
   - `obtenerMaxIdDesdeTiquetes()`: Busca el máximo ID en `tiquetes.json`
   - `obtenerMaxIdDesdeAtendidos()`: Busca el máximo ID en `atendidos.json`
 
-#### `GrafoRutas` (Módulo 1.4 - Implementado por Andrew)
+#### `GrafoRutas` (Módulo 1.4)
 - **Propósito**: Grafo ponderado dirigido para representar rutas entre localidades usando arrays
 - **Métodos principales**:
   - `agregarVertice(Localidad)`: Agrega una localidad al grafo
@@ -573,7 +553,7 @@ El sistema genera y utiliza los siguientes archivos:
   - `obtenerVertices()`: Retorna array de vértices para serialización
   - `cargarVertices(VerticeGrafo[])`: Carga vértices desde array
 
-#### `GestionGrafo` (Módulo 1.4 - Implementado por Andrew)
+#### `GestionGrafo` (Módulo 1.4)
 - **Propósito**: Gestión completa del módulo 1.4 con menú y persistencia
 - **Métodos principales**:
   - `gestionarGrafo()`: Menú principal del módulo de grafos
@@ -583,28 +563,28 @@ El sistema genera y utiliza los siguientes archivos:
   - `agregarRuta()`: Permite agregar rutas desde el menú
   - `consultarRutaMasCorta()`: Consulta la ruta más corta entre dos localidades
 
-#### `Localidad` (Módulo 1.4 - Implementado por Samuel)
+#### `Localidad` (Módulo 1.4)
 - **Propósito**: Representa una localidad donde el bus puede parar
 - **Atributos**: `id`, `nombre`
 
-#### `VerticeGrafo` (Módulo 1.4 - Implementado por Samuel)
+#### `VerticeGrafo` (Módulo 1.4)
 - **Propósito**: Vértice del grafo con array de adyacentes
 - **Atributos**: `valor` (Localidad), `adyacentes` (array de AristaGrafo), `cantidadAristas` (int)
 - **Métodos principales**:
   - `agregarArista(AristaGrafo)`: Agrega una arista al vértice
 
-#### `AristaGrafo` (Módulo 1.4 - Implementado por Gerald)
+#### `AristaGrafo` (Módulo 1.4)
 - **Propósito**: Arista con peso para el grafo ponderado
 - **Atributos**: `destino` (Localidad), `peso` (int)
 
-#### `ServicioBCCR` (Módulo 1.5 - Implementado por Luna)
+#### `ServicioBCCR` (Módulo 1.5)
 - **Propósito**: Consumo del Web Service del Banco Central de Costa Rica para obtener el tipo de cambio
 - **Métodos principales**:
   - `obtenerIndicador(String, String, String, String, String, String, String)`: Obtiene indicador económico del BCCR mediante HTTP POST
   - `obtenerTipoCambioVenta()`: Obtiene el tipo de cambio de venta del dólar (indicador 318)
 - **Detalles técnicos**: Utiliza HttpClient de Java y JAXB para deserialización XML
 
-#### `IndicadorEconomico` (Módulo 1.5 - Implementado por Luna)
+#### `IndicadorEconomico` (Módulo 1.5)
 - **Propósito**: Estructura de datos que representa la respuesta XML del BCCR
 - **Atributos**: `diffgram` (Diffgram) - estructura anidada con los datos del indicador
 - **Clases internas**:
@@ -613,7 +593,7 @@ El sistema genera y utiliza los siguientes archivos:
   - `Indicador`: Representa un indicador individual con código, fecha y valor
 - **Detalles técnicos**: Utiliza anotaciones JAXB para mapeo XML
 
-#### `GestionTipoCambio` (Módulo 1.5 - Implementado por Luna)
+#### `GestionTipoCambio` (Módulo 1.5)
 - **Propósito**: Gestión de la consulta del tipo de cambio del BCCR
 - **Métodos principales**:
   - `consultarTipoCambio()`: Consulta el tipo de cambio y lo muestra al usuario mediante JOptionPane
@@ -629,10 +609,10 @@ El sistema genera y utiliza los siguientes archivos:
 - Se utiliza lista enlazada simple para el historial de atendidos y colas de buses
 - La atención al crear tiquete se hace por medio de control manual mediante opción "Abordar"
 - IDs de pasajeros se generan automáticamente para evitar duplicados
-- **Integración del módulo 1.3:** Gerald integró las funcionalidades del módulo 1.3 en el menú principal de gestión de tiquetes, incluyendo la asignación automática de tiquetes a buses y la opción para ver el estado de las colas.
-- **GestorIdPasajero:** Implementado por Gerald para generar IDs autoincrementales de pasajeros, evitando duplicados y mejorando la experiencia de usuario.
-- **Integración módulo 1.3 con 1.2:** Implementada por Gerald, modificando `ModuloAtencionTiquetes` para que decremente las colas de buses cuando se atiende un tiquete, tanto si el pago es aceptado como rechazado.
-- **Módulo 1.5 - Consulta BCCR:** Implementado por Luna Delgado Durango, incluyendo integración con Web Service del Banco Central de Costa Rica, consulta de tipo de cambio en línea, conversión automática de montos a colones y opción de menú para consulta manual. El tipo de cambio se integra automáticamente en el cálculo de cobros del módulo 1.2.
+- La integración del módulo 1.3 incluye asignación automática de tiquetes a buses y visualización del estado de las colas
+- `GestorIdPasajero` genera IDs autoincrementales de pasajeros, evitando duplicados y mejorando la experiencia de usuario
+- El decremento de colas al atender tiquetes funciona tanto si el pago es aceptado como rechazado
+- El módulo 1.5 integra el Web Service del Banco Central de Costa Rica para consulta de tipo de cambio en línea, conversión automática de montos a colones y manejo de errores cuando el servicio no está disponible
 
 ## Correcciones Realizadas en Esta Entrega
 
@@ -652,19 +632,18 @@ El sistema genera y utiliza los siguientes archivos:
 - ✅ Actualización automática de colas al atender tiquetes
 - ✅ Persistencia y carga correcta de colas desde `colas.txt`
 - ✅ Compatibilidad de códigos P/D/N con nombres completos en asignación
-- ✅ **Integración del módulo 1.3:** Gerald integró las funcionalidades del módulo 1.3 en el menú principal de gestión de tiquetes, incluyendo la asignación automática de tiquetes a buses (opción 1) y la opción para ver el estado de las colas (opción 5).
-- ✅ **GestorIdPasajero:** Implementado por Gerald para generar IDs autoincrementales, evitando duplicados.
-- ✅ **Integración módulo 1.3 con 1.2:** Implementada por Gerald, conectando el decremento de colas cuando se atiende un tiquete.
-- ✅ **Módulo 1.4 - Servicios Complementarios:** Implementado principalmente por jiro (Jeferson Andrew Fuentes García) con las clases `GrafoRutas` (grafo ponderado dirigido usando arrays, algoritmo de Dijkstra para ruta más corta) y `GestionGrafo` (menú, persistencia en `grafo.json` e integración en el menú principal). Las clases `Localidad` y `VerticeGrafo` fueron implementadas por Samuel Alonso Mena Garro, y `AristaGrafo` fue implementada por Gerald Obed Herra Fonseca.
-- ✅ **Módulo 1.5 - Consulta BCCR:** Implementado por Luna Delgado Durango, incluyendo integración con Web Service del BCCR, consulta de tipo de cambio en línea, conversión automática de montos a colones en el módulo 1.2, opción de menú para consulta manual y manejo de errores cuando el servicio no está disponible.
+- ✅ Integración del módulo 1.3 en el menú principal de gestión de tiquetes, incluyendo asignación automática (opción 1) y visualización de estado de colas (opción 5)
+- ✅ `GestorIdPasajero` para generar IDs autoincrementales, evitando duplicados
+- ✅ Integración módulo 1.3 con 1.2: decremento de colas al atender tiquetes
+- ✅ **Módulo 1.4 - Servicios Complementarios:** `GrafoRutas` (grafo ponderado dirigido, algoritmo de Dijkstra) y `GestionGrafo` (menú, persistencia en `grafo.json`). Clases `Localidad`, `VerticeGrafo` y `AristaGrafo` para estructura del grafo.
+- ✅ **Módulo 1.5 - Consulta BCCR:** Integración con Web Service del BCCR, consulta de tipo de cambio en línea, conversión automática de montos a colones en el módulo 1.2, opción de menú para consulta manual y manejo de errores.
 
 ### Mejoras Implementadas
-- ✅ **ID autoincremental:** Implementación de generación automática de IDs de pasajeros (Gerald - `GestorIdPasajero`)
+- ✅ **ID autoincremental:** Generación automática de IDs de pasajeros (`GestorIdPasajero`)
 - ✅ **Gestión mejorada de colas:** Sistema robusto de actualización sin duplicados
-- ✅ **Integración módulo 1.3 con 1.2:** Decremento automático de colas al atender tiquetes (Gerald)
+- ✅ **Integración módulo 1.3 con 1.2:** Decremento automático de colas al atender tiquetes
 
 
 ---
 
-**Desarrollado para el curso de Estructuras de Datos - Universidad Fidélitas**
-**Tercer Cuatrimestre 2025 - Grupo 6**
+Ver [CONTRIBUTORS.md](./CONTRIBUTORS.md) para información del equipo de desarrollo.

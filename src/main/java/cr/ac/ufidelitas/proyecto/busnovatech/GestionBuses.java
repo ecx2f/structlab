@@ -2,7 +2,7 @@ package cr.ac.ufidelitas.proyecto.busnovatech;
 
 /**
  *
- * @author samim
+ * @author samu-mena
  */
 import javax.swing.*;
 
@@ -100,7 +100,7 @@ public class GestionBuses {
         JOptionPane.showMessageDialog(null, texto);
     }
 
-    // Andrew - busca y retorna un bus disponible del tipo solicitado
+    // ecx2f - busca y retorna un bus disponible del tipo solicitado
     public Bus obtenerBusDisponiblePorTipo(String tipoBus) {
         if (tipoBus == null) {
             return null;
@@ -118,7 +118,7 @@ public class GestionBuses {
         return null;
     }
 
-    // Busca un bus por su ID y lo devuelve - Luna
+    // Busca un bus por su ID y lo devuelve - lunadd-00
     public Bus obtenerBusPorId(String idBus) {
         if (idBus == null || primero == null) {
             return null;

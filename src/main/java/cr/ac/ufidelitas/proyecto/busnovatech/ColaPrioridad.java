@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Geral
+ * @author gerald-hf
  */
 public class ColaPrioridad {
 
@@ -94,7 +94,7 @@ public class ColaPrioridad {
             JOptionPane.showMessageDialog(null, "La cola está vacía.");
             return;
         }
-        // Andrew - construye mensaje formateado con todos los tiquetes
+        // ecx2f - construye mensaje formateado con todos los tiquetes
         StringBuilder sb = new StringBuilder("=== Cola de tiquetes ===\n\n");
         Nodo<NodoTiquete> actual = frente;
         while (actual != null) {
@@ -125,7 +125,7 @@ public class ColaPrioridad {
         return sb.toString();
     }
 
-    // Andrew - crea tiquete con datos del usuario, ID autoincremental y hora automática
+    // ecx2f - crea tiquete con datos del usuario, ID autoincremental y hora automática
     public NodoTiquete crearTiquete() {
         try {
             String nombre = JOptionPane.showInputDialog("Nombre del pasajero:");

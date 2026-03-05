@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author jiroaku
+ * @author ecx2f
  */
 public class ConfiguracionSistema {
 

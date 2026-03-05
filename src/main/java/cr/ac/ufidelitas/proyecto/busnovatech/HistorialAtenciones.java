@@ -9,9 +9,9 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author @jiroaku
+ * @author ecx2f
  */
-// Andrew - historial de tiquetes atendidos con lista enlazada y JSON
+// ecx2f - historial de tiquetes atendidos con lista enlazada y JSON
 public class HistorialAtenciones {
 
     private Nodo<RegistroAtencion> primero;

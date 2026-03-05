@@ -2,7 +2,7 @@ package cr.ac.ufidelitas.proyecto.busnovatech;
 
 /**
  *
- * @author Geral
+ * @author gerald-hf
  */
 public class NodoTiquete {
     //Usamos private para proteger la informacion

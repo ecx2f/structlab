@@ -2,7 +2,7 @@ package cr.ac.ufidelitas.proyecto.busnovatech;
 
 /**
  *
- * @author samim
+ * @author samu-mena
  */
 // Vértice del grafo con adyacentes usando arrays
 public class VerticeGrafo {

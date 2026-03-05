@@ -2,7 +2,7 @@ package cr.ac.ufidelitas.proyecto.busnovatech;
 
 /**
  *
- * @author jiro
+ * @author ecx2f
  */
 // Grafo ponderado dirigido para rutas de buses usando arrays
 public class GrafoRutas {

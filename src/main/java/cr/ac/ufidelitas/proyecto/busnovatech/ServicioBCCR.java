@@ -2,7 +2,7 @@ package cr.ac.ufidelitas.proyecto.busnovatech;
 
 /**
  *
- * @author lunad
+ * @author lunadd-00
  */
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -56,10 +56,10 @@ public class ServicioBCCR {
                 "318", // Indicador venta dólar
                 "15/12/2025",
                 "16/12/2025",
-                "Luna Delgado",
+                "BCCR_NOMBRE",
                 "N",
-                "luna.dd26@gmail.com",
-                "9L2D52D2L5"
+                "BCCR_EMAIL",
+                "BCCR_TOKEN"
         );
 
         if (indicador == null
